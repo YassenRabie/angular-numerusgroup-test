@@ -34,8 +34,9 @@ ul {
 }
 
 .page-content {
-  width: calc(100% - 200px);
+  width: calc(100% - 260px);
   padding: 64px;
+  /* padding-bottom: unset; */
 }
 
 a {

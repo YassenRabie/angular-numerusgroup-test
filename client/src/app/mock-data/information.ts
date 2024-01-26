@@ -32,7 +32,7 @@ export const INFORMATION: IInformation[] = [
       ["The Matrix", "The Wachowskis", 1999],
       ["Schindler's List", "Steven Spielberg", 1993],
       ["Fight Club", "David Fincher", 1999],
-      ["The Silence of the Lambs", "Jonathan Demme", 1991]
+      ["The Silence of the Lambs", "Jonathan Demme", 1991],
     ]
   },
   {
