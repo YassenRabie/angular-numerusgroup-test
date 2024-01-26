@@ -1,0 +1,15 @@
+<app-top-bar></app-top-bar>
+
+<div class="page-content">
+  <h3 class="page-title">{{data?.title}}</h3>
+
+  <p *ngIf="!data">
+    Something went wrong!
+  </p>
+
+  <div *ngIf="data">
+    <app-dynamic-table [headers]="data.headers" [data]="data.data"></app-dynamic-table>
+  </div>
+</div>
+
+<app-side-menu></app-side-menu>

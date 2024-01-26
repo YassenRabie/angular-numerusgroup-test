@@ -8,6 +8,7 @@ table th {
   background-color: var(--primary-color);
   color: var(--light-gray-color);
   font-size: 1em;
+  font-weight: 500;
 }
 
 table td {

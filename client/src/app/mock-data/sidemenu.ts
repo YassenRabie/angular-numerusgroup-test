@@ -1,11 +1,6 @@
-export interface SidemenuItem {
-  name: string;
-  id: string;
-  url?: string;
-  children?: SidemenuItem[];
-}
+import { ISidemenuItem } from "../types/navigation";
 
-export const SIDEMENU_DATA: SidemenuItem[] = [
+export const SIDEMENU_DATA: ISidemenuItem[] = [
   {
     id: "dasboard",
     name: "Dashboard",
@@ -18,16 +13,17 @@ export const SIDEMENU_DATA: SidemenuItem[] = [
       {
         id: "table-data-1",
         name: "Table Data 1",
-        url: "/table/1"
+        url: "/table/0"
       },
       {
         id: "table-data-2",
         name: "Table Data 2",
-        url: "/table/2"
+        url: "/table/1"
       },
       {
         id: "table-data-3",
         name: "Table Data 3",
+        url: "/table/2"
       },
     ]
   },
@@ -47,7 +43,3 @@ export const SIDEMENU_DATA: SidemenuItem[] = [
     url: "",
   },
 ];
-
-const PAGES_WITHOUT_LAYOUT = [
-  "/login"
-]

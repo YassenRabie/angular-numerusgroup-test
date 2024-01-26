@@ -12,6 +12,7 @@ interface TableData {
 })
 export class DynamicTableComponent {
   tableDataSrc: any;
-  @Input() tableData!: TableData;
+  @Input() headers!: string[];
+  @Input() data!: string[][];
   @Input() fontSize?: string = "22px";
 }

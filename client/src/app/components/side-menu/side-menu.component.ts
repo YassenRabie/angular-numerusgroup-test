@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SIDEMENU_DATA, SidemenuItem } from '../../constants/navigation';
+import { SIDEMENU_DATA, ISidemenuItem } from '../../types/navigation';
 
 @Component({
   selector: 'app-side-menu',
@@ -7,5 +7,5 @@ import { SIDEMENU_DATA, SidemenuItem } from '../../constants/navigation';
   styleUrl: './side-menu.component.css'
 })
 export class SideMenuComponent {
-  sidemenuData: SidemenuItem[] = SIDEMENU_DATA;
+  sidemenuData: ISidemenuItem[] = SIDEMENU_DATA;
 }

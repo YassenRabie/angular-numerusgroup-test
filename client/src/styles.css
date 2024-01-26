@@ -42,3 +42,10 @@ a {
   color: var(--dark-gray-color);
   text-decoration: none;
 }
+
+.page-title {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
