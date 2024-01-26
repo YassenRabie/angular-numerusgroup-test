@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './top-bar.component.css'
 })
 export class TopBarComponent {
-  appTitle = "Yassen Rabie"
+  // Property to store the title of the application
+  appTitle = "Numerus Group"
 }

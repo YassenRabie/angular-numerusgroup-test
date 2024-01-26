@@ -11,6 +11,10 @@ export class NavigationService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+ * Fetches navigation data.
+ * @returns Observable containing an array of navigation items.
+ */
   getNavigation(): Observable<INavigationItem[]> {
     return this.http.get<INavigationItem[]>(`${environment.apiUrl}/navigation`);
   }

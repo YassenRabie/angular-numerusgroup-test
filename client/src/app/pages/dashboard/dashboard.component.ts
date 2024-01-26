@@ -9,6 +9,7 @@ import { ArticalService } from '../../services/artical/artical.service';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  // Array to store a list of articles to be displayed in the dashbaord
   articals: IArtical[] = [];
 
   constructor(private route: ActivatedRoute, private articalService: ArticalService) { }

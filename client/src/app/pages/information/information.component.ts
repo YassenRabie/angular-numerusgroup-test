@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './information.component.css'
 })
 export class InformationComponent implements OnInit {
+  // Property to store the table data and title
   data?: IInformation;
 
   constructor(private route: ActivatedRoute, private informationService: InformationService) { }

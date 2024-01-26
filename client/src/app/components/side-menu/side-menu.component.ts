@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { INavigationItem } from '../../types/navigation';
-import { SIDEMENU_DATA } from '../../mock-data/sidemenu';
 import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { NavigationService } from '../../services/navigation/navigation.service'
   styleUrl: './side-menu.component.css'
 })
 export class SideMenuComponent {
+  // Array to store navigation items for the side menu
   sidemenuData: INavigationItem[] = [];
 
   constructor(private navigationService: NavigationService) { }

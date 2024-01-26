@@ -11,12 +11,19 @@ import { RecaptchaComponent } from 'ng-recaptcha';
   styleUrl: './login-form.component.css'
 })
 export class LoginFormComponent {
+  // View child for accessing the userLoginForm NgForm
   @ViewChild('userLoginForm', { static: false }) userLoginForm!: NgForm;
+
+  // View child for accessing the Recaptcha component
   @ViewChild('captchaRef') public captchaRef!: RecaptchaComponent;
 
+  // Property to store the captcha response
   captcha: string = "";
 
+  // Model for user login information
   userModel = new User('', '');
+
+  // Variable to store error messages
   errorMessage = "";
 
   constructor(

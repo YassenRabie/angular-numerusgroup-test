@@ -9,6 +9,7 @@ import { ArticalService } from '../../services/artical/artical.service';
   styleUrl: './artical-details.component.css'
 })
 export class ArticalDetailsComponent {
+  // Property to store the details of the displayed article
   artical!: IArtical;
 
   constructor(private route: ActivatedRoute, private articalService: ArticalService) { }

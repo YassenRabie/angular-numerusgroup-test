@@ -11,10 +11,19 @@ export class ArticalService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+  * Fetches all articles.
+  * @returns Observable containing an array of articles.
+  */
   getAllArticals(): Observable<IArtical[]> {
     return this.http.get<IArtical[]>(`${environment.apiUrl}/articals`);
   }
 
+  /**
+  * Fetches an article by its ID.
+  * @param id - ID of the article to be fetched.
+  * @returns Observable containing the details of the article.
+  */
   getArticalById(id: string): Observable<IArtical> {
     return this.http.get<IArtical>(`${environment.apiUrl}/articals/${id}`);
   }
