@@ -58,16 +58,35 @@ form.ng-submitted .ng-invalid:not(form) {
   border: 2px solid #ef4444;
 }
 
+.captcha {
+  margin: 16px 0;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+
+  padding: 16px 32px;
+  margin-bottom: 16px;
+}
+
 button {
   border: none;
   background-color: var(--dark-gray-color);
   color: var(--light-gray-color);
   padding: 16px 32px;
-  cursor: pointer;
   font-size: 16px;
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
-button:hover {
+button:hover:enabled {
   background-color: var(--gray-color);
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: var(--gray-color);
+  cursor: not-allowed;
 }

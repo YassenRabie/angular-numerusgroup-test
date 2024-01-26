@@ -11,6 +11,7 @@ import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.
 import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
+import { RecaptchaModule } from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RecaptchaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

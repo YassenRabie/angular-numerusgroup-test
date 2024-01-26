@@ -14,10 +14,15 @@
         name="password">
     </div>
 
-    <div *ngIf="errorMessage">
+    <div class="captcha">
+      <re-captcha #captchaRef="reCaptcha" (resolved)="resolved($event)"
+        siteKey="6Lckal0pAAAAAKdclaoCav_rlUQhL35_nuPgHyla"></re-captcha>
+    </div>
+
+    <div class="error-message" *ngIf="errorMessage">
       <p>{{errorMessage}}</p>
     </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" [disabled]="!userLoginForm.form.valid || !captcha">Submit</button>
   </form>
 </div>

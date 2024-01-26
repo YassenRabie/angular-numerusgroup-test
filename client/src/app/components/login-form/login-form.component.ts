@@ -3,6 +3,7 @@ import { User } from '../../models/login';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication/authentication.service';
 import { NgForm } from '@angular/forms';
+import { RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-login-form',
@@ -11,16 +12,26 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginFormComponent {
   @ViewChild('userLoginForm', { static: false }) userLoginForm!: NgForm;
+  @ViewChild('captchaRef') public captchaRef!: RecaptchaComponent;
+
+  captcha: string = "";
 
   userModel = new User('', '');
   errorMessage = "";
 
-  constructor(private router: Router, private authenticationService: AuthenticationService) { }
+  constructor(
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) { }
+
+  resolved(response: string | null) {
+    this.captcha = response ?? "";
+  }
 
   onSubmit() {
     this.errorMessage = "";
 
-    if (!this.userLoginForm.valid)
+    if (!this.userLoginForm.valid || !this.captcha)
       return;
 
     const user = this.authenticationService.login(this.userModel.username, this.userModel.password);
@@ -31,6 +42,7 @@ export class LoginFormComponent {
     }
 
     this.errorMessage = user.error;
+    this.captchaRef.reset();
   }
 
   newHero() {
