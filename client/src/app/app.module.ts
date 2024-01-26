@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { TableDataComponent } from './pages/table-data/table-data.component';
+import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     TopBarComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    TableDataComponent,
+    DynamicTableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

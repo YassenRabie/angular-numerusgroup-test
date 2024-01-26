@@ -7,5 +7,5 @@ import { SIDEMENU_DATA, SidemenuItem } from '../../constants/navigation';
   styleUrl: './side-menu.component.css'
 })
 export class SideMenuComponent {
-  sidemenuData: SidemenuItem[] = [...SIDEMENU_DATA];
+  sidemenuData: SidemenuItem[] = SIDEMENU_DATA;
 }

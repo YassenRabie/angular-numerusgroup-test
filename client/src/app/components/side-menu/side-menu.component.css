@@ -12,25 +12,26 @@
    right: 0;
 
    background-color: var(--light-gray-color);
-   border-left: 1px solid var(--gray-color);
+   border-left: 1px solid var(--mid-gray-color);
 
    display: flex;
    flex-direction: column;
  }
 
  .menu-container {
-   margin-bottom: 16px;
+   margin-bottom: 8px;
    font-size: 20px;
  }
 
  .menu-container a {
    color: var(--dark-gray-color);
    margin-bottom: 8px;
+   text-decoration: none;
  }
 
  .sub-sidemenu-container {
    margin-left: 16px;
-   font-size: 16px;
+   font-size: 18px;
 
    display: flex;
    flex-direction: column;

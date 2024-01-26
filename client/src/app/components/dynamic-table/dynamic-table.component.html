@@ -1,0 +1,13 @@
+<table *ngIf="tableData" [style.--font-size]="fontSize">
+  <tr>
+    <th *ngFor="let column of tableData?.columns">
+      {{ column | uppercase }}
+    </th>
+  </tr>
+
+  <tr *ngFor="let tableRow of tableData?.rows">
+    <td *ngFor="let row of tableRow">
+      {{ row }}
+    </td>
+  </tr>
+</table>

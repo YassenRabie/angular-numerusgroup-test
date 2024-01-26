@@ -18,11 +18,12 @@ export const SIDEMENU_DATA: SidemenuItem[] = [
       {
         id: "table-data-1",
         name: "Table Data 1",
-        url: "/something"
+        url: "/table/1"
       },
       {
         id: "table-data-2",
         name: "Table Data 2",
+        url: "/table/2"
       },
       {
         id: "table-data-3",
