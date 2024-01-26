@@ -13,17 +13,17 @@ export const SIDEMENU_DATA: ISidemenuItem[] = [
       {
         id: "table-data-1",
         name: "Table Data 1",
-        url: "/table/0"
+        url: "/information/0"
       },
       {
         id: "table-data-2",
         name: "Table Data 2",
-        url: "/table/1"
+        url: "/information/1"
       },
       {
         id: "table-data-3",
         name: "Table Data 3",
-        url: "/table/2"
+        url: "/information/2"
       },
     ]
   },

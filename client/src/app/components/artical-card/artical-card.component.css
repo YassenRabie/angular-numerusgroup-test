@@ -1,0 +1,25 @@
+.card {
+  border: 1px solid var(--mid-gray-color);
+  border-radius: 2px;
+  padding: 32px 16px;
+  min-height: 180px;
+}
+
+.card:hover {
+  border: 1px solid var(--gray-color);
+  background-color: var(--light-gray-color);
+}
+
+.artical-title {
+  font-size: 24px;
+}
+
+.artical-content {
+  margin-top: 16px;
+  color: var(--gray-color);
+  max-width: 75%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

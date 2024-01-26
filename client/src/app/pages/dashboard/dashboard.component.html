@@ -1,7 +1,9 @@
 <app-top-bar></app-top-bar>
 
 <div class="page-content">
-  <p>Dashboard content!</p>
+  <h1 class="page-title">Articals</h1>
+
+  <app-artical-card [artical]="artical" *ngFor="let artical of articals"></app-artical-card>
 </div>
 
 <app-side-menu></app-side-menu>

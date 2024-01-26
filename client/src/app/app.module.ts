@@ -13,6 +13,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { FormsModule } from '@angular/forms';
 import { RecaptchaModule } from "ng-recaptcha";
 import { HttpClientModule } from '@angular/common/http';
+import { ArticalCardComponent } from './components/artical-card/artical-card.component';
+import { ArticalDetailsComponent } from './pages/artical-details/artical-details.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     DynamicTableComponent,
     LoginComponent,
     LoginFormComponent,
+    ArticalCardComponent,
+    ArticalDetailsComponent,
   ],
   imports: [
     BrowserModule,
