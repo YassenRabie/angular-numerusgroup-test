@@ -19,20 +19,22 @@
  }
 
  .menu-container {
-   margin-bottom: 8px;
-   font-size: 20px;
- }
-
- .menu-container a {
-   margin-bottom: 8px;
+   margin-bottom: 16px;
+   font-size: 22px;
  }
 
  .sub-sidemenu-container {
-   margin-left: 16px;
+   margin-left: 32px;
+   margin-top: 8px;
+
    font-size: 18px;
 
    display: flex;
    flex-direction: column;
+ }
+
+ .sub-sidemenu-container a {
+   margin-bottom: 8px;
  }
 
  .menu-container a[href]:hover {
