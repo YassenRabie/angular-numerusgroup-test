@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { IInformation } from '../../types/information';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-
-const URL = 'http://localhost:4000/information'
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +12,10 @@ export class InformationService {
   constructor(private http: HttpClient) { }
 
   getAllInformation(): Observable<IInformation[]> {
-    return this.http.get<IInformation[]>(URL);
+    return this.http.get<IInformation[]>(`${environment.apiUrl}/information`);
   }
 
   getInformationById(id: string): Observable<IInformation> {
-    return this.http.get<IInformation>(`${URL}/${id}`);
+    return this.http.get<IInformation>(`${environment.apiUrl}/information/${id}`);
   }
 }
