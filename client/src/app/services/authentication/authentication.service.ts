@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
+import { User } from '../../models/login';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  users = [
-    { uesrname: "admin", password: "admin" },
-    { uesrname: "test", password: "test" },
-  ]
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
-  constructor() {
-  }
+  constructor(private http: HttpClient) { }
 
-  login(username: string, password: string) {
-    const user = this.users.find((u) => u.uesrname === username && u.password === password);
+  login(user: User): Observable<User> {
+    // return this.http.post<User>(`${environment.apiUrl}/user/login`, user, this.httpOptions);
 
-    if (!user)
-      return { error: "User not found, try again!" };
+    return this.http.post<User>(`${environment.apiUrl}/user/login`, user, this.httpOptions).pipe(
+      catchError((error: HttpErrorResponse) => {
+        return throwError(error.error);
+      })
+    );
 
-    return { user };
   }
 }

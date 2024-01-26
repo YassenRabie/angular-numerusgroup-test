@@ -34,18 +34,11 @@ export class LoginFormComponent {
     if (!this.userLoginForm.valid || !this.captcha)
       return;
 
-    const user = this.authenticationService.login(this.userModel.username, this.userModel.password);
-
-    if (user.user) {
+    this.authenticationService.login(this.userModel).subscribe((user) => {
       this.router.navigate(['/dashboard']);
-      return;
-    }
-
-    this.errorMessage = user.error;
-    this.captchaRef.reset();
-  }
-
-  newHero() {
-    // this.model = new User(42, '', '');
+    }, (error) => {
+      this.errorMessage = error.error;
+      this.captchaRef.reset();
+    });
   }
 }
