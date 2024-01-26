@@ -8,6 +8,9 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { TableDataComponent } from './pages/table-data/table-data.component';
 import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
+import { LoginComponent } from './pages/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.
     TopBarComponent,
     SideMenuComponent,
     TableDataComponent,
-    DynamicTableComponent
+    DynamicTableComponent,
+    LoginComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

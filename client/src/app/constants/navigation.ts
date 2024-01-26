@@ -9,7 +9,7 @@ export const SIDEMENU_DATA: SidemenuItem[] = [
   {
     id: "dasboard",
     name: "Dashboard",
-    url: "/",
+    url: "/dashboard",
   },
   {
     id: "table-data",
@@ -46,4 +46,8 @@ export const SIDEMENU_DATA: SidemenuItem[] = [
     name: "Logout",
     url: "",
   },
+];
+
+const PAGES_WITHOUT_LAYOUT = [
+  "/login"
 ]

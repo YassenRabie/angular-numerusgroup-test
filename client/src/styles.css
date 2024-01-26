@@ -8,8 +8,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark-gray-color);
 }
 
 *,
@@ -33,12 +33,12 @@ ul {
   font-weight: normal;
 }
 
-ol,
-ul {
-  list-style: none;
+.page-content {
+  width: calc(100% - 200px);
+  padding: 64px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+a {
+  color: var(--dark-gray-color);
+  text-decoration: none;
 }

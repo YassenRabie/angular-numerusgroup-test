@@ -24,9 +24,7 @@
  }
 
  .menu-container a {
-   color: var(--dark-gray-color);
    margin-bottom: 8px;
-   text-decoration: none;
  }
 
  .sub-sidemenu-container {
