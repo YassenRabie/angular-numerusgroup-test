@@ -1,6 +1,6 @@
-export interface ISidemenuItem {
+export interface INavigationItem {
   name: string;
   id: string;
   url?: string;
-  children?: ISidemenuItem[];
+  children?: INavigationItem[];
 }

@@ -24,10 +24,10 @@
  }
 
  .sub-sidemenu-container {
-   margin-left: 32px;
+   margin-left: 16px;
    margin-top: 8px;
 
-   font-size: 18px;
+   font-size: 16px;
 
    display: flex;
    flex-direction: column;
@@ -35,6 +35,11 @@
 
  .sub-sidemenu-container a {
    margin-bottom: 8px;
+
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
  }
 
  .menu-container a[href]:hover {

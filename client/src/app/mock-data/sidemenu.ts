@@ -1,6 +1,6 @@
-import { ISidemenuItem } from "../types/navigation";
+import { INavigationItem } from "../types/navigation";
 
-export const SIDEMENU_DATA: ISidemenuItem[] = [
+export const SIDEMENU_DATA: INavigationItem[] = [
   {
     id: "dasboard",
     name: "Dashboard",
