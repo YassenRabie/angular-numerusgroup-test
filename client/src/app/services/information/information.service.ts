@@ -1,15 +1,22 @@
 import { Injectable } from '@angular/core';
-import { INFORMATION } from '../../mock-data/information';
 import { IInformation } from '../../types/information';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
+const URL = 'http://localhost:4000/information'
 
 @Injectable({
   providedIn: 'root'
 })
 export class InformationService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getDataById(id: string | number): IInformation | undefined {
-    return INFORMATION.find((e) => e.id == id)
+  getAllInformation(): Observable<IInformation[]> {
+    return this.http.get<IInformation[]>(URL);
+  }
+
+  getInformationById(id: string): Observable<IInformation> {
+    return this.http.get<IInformation>(`${URL}/${id}`);
   }
 }

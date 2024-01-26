@@ -15,12 +15,14 @@ export class InformationComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const id = Number(params.get('id'));
-      this.getData(id);
+      const id = params.get('id');
+      this.getData(id!);
     });
   }
 
-  getData(id: string | number): void {
-    this.data = this.informationService.getDataById(id);
+  getData(id: string) {
+    this.informationService.getInformationById(id).subscribe((information) => {
+      this.data = information;
+    });
   }
 }

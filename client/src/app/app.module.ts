@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { RecaptchaModule } from "ng-recaptcha";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RecaptchaModule } from "ng-recaptcha";
     AppRoutingModule,
     FormsModule,
     RecaptchaModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
