@@ -15,13 +15,10 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
   login(user: User): Observable<User> {
-    // return this.http.post<User>(`${environment.apiUrl}/user/login`, user, this.httpOptions);
-
     return this.http.post<User>(`${environment.apiUrl}/user/login`, user, this.httpOptions).pipe(
       catchError((error: HttpErrorResponse) => {
         return throwError(error.error);
       })
     );
-
   }
 }
