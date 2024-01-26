@@ -1,0 +1,41 @@
+ /* The sidebar menu */
+ .container {
+   height: 100%;
+   width: 200px;
+   padding: 16px;
+
+   overflow-x: hidden;
+   position: fixed;
+   z-index: 1;
+
+   top: 60px;
+   right: 0;
+
+   background-color: var(--light-gray-color);
+   border-left: 1px solid var(--gray-color);
+
+   display: flex;
+   flex-direction: column;
+ }
+
+ .menu-container {
+   margin-bottom: 16px;
+   font-size: 20px;
+ }
+
+ .menu-container a {
+   color: var(--dark-gray-color);
+   margin-bottom: 8px;
+ }
+
+ .sub-sidemenu-container {
+   margin-left: 16px;
+   font-size: 16px;
+
+   display: flex;
+   flex-direction: column;
+ }
+
+ .menu-container a[href]:hover {
+   color: var(--primary-color)
+ }
