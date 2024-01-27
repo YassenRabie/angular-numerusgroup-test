@@ -12,6 +12,9 @@ export class ArticalDetailsComponent {
   // Property to store the details of the displayed article
   artical!: IArtical;
 
+  // Variable to store error condition
+  error: boolean = false;
+
   constructor(private route: ActivatedRoute, private articalService: ArticalService) { }
 
   ngOnInit(): void {
@@ -24,6 +27,6 @@ export class ArticalDetailsComponent {
   getData(id: string) {
     this.articalService.getArticalById(id).subscribe((artical) => {
       this.artical = artical;
-    });
+    }, (err) => this.error = !!err);
   }
 }

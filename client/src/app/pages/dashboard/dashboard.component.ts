@@ -12,6 +12,9 @@ export class DashboardComponent {
   // Array to store a list of articles to be displayed in the dashbaord
   articals: IArtical[] = [];
 
+  // Variable to store error condition
+  error: boolean = false;
+
   constructor(private route: ActivatedRoute, private articalService: ArticalService) { }
 
   ngOnInit(): void {
@@ -21,6 +24,6 @@ export class DashboardComponent {
   getData() {
     this.articalService.getAllArticals().subscribe((articals) => {
       this.articals = articals;
-    });
+    }, (err) => this.error = !!err);
   }
 }

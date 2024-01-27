@@ -24,7 +24,10 @@ export class LoginFormComponent {
   userModel = new User('', '');
 
   // Variable to store error messages
-  errorMessage = "";
+  errorMessage: string = "";
+
+  // Variable to check if form is submitting
+  isSubmitting: boolean = false;
 
   constructor(
     private router: Router,
@@ -41,9 +44,12 @@ export class LoginFormComponent {
     if (!this.userLoginForm.valid || !this.captcha)
       return;
 
+    this.isSubmitting = true;
+
     this.authenticationService.login(this.userModel).subscribe((user) => {
       this.router.navigate(['/dashboard']);
     }, (error) => {
+      this.isSubmitting = false;
       this.errorMessage = error.error;
       this.captchaRef.reset();
     });

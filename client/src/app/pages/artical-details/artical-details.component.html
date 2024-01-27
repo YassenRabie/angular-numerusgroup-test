@@ -1,15 +1,15 @@
 <app-top-bar></app-top-bar>
 
 <div class="page-content">
-  <p *ngIf="!artical">
-    Something went wrong!
-  </p>
+  <p *ngIf="error">Something went wrong, try again later</p>
 
-  <div *ngIf="artical">
+  <p *ngIf="!error && !artical">Loading</p>
+
+  <ng-container *ngIf="artical">
     <h3 class="page-title">{{artical.title}}</h3>
 
     <p class="artical-content">{{artical.content}}</p>
-  </div>
+  </ng-container>
 </div>
 
 <app-side-menu></app-side-menu>

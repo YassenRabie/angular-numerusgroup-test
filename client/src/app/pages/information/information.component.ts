@@ -12,6 +12,9 @@ export class InformationComponent implements OnInit {
   // Property to store the table data and title
   data?: IInformation;
 
+  // Variable to store error condition
+  error: boolean = false;
+
   constructor(private route: ActivatedRoute, private informationService: InformationService) { }
 
   ngOnInit(): void {
@@ -24,6 +27,6 @@ export class InformationComponent implements OnInit {
   getData(id: string) {
     this.informationService.getInformationById(id).subscribe((information) => {
       this.data = information;
-    });
+    }, (err) => this.error = !!err);
   }
 }

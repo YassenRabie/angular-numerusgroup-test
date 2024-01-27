@@ -1,9 +1,15 @@
 <app-top-bar></app-top-bar>
 
 <div class="page-content">
-  <h1 class="page-title">Articals</h1>
+  <p *ngIf="error">Something went wrong, try again later</p>
 
-  <app-artical-card [artical]="artical" *ngFor="let artical of articals"></app-artical-card>
+  <p *ngIf="!error && !articals">Loading</p>
+
+  <ng-container *ngIf="articals">
+    <h1 class="page-title">Articals</h1>
+
+    <app-artical-card [artical]="artical" *ngFor="let artical of articals"></app-artical-card>
+  </ng-container>
 </div>
 
 <app-side-menu></app-side-menu>

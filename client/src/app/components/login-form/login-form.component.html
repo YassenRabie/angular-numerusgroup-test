@@ -23,6 +23,8 @@
       <p>{{errorMessage}}</p>
     </div>
 
-    <button type="submit" class="btn btn-success" [disabled]="!userLoginForm.form.valid || !captcha">Submit</button>
+    <button type="submit" class="btn btn-success" [disabled]="!userLoginForm.form.valid || !captcha">
+      {{isSubmitting ? "Loading" : "Submit"}}
+    </button>
   </form>
 </div>
