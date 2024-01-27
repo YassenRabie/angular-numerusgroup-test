@@ -10,7 +10,7 @@ import { ArticalService } from '../../services/artical/artical.service';
 })
 export class DashboardComponent {
   // Array to store a list of articles to be displayed in the dashbaord
-  articals: IArtical[] = [];
+  articals!: IArtical[];
 
   // Variable to store error condition
   error: boolean = false;
