@@ -1,5 +1,9 @@
 # Numerus Group Angular Task
 
+Within this repository, you'll find a full-stack application crafted with Angular and Node.js, with focus on the client-side.
+
+To simplify the client's structure, I chose a simple folder organization aligned with the application's needs, Therefore I decided to choose a [Pages, Components, Services] separation rather than adopting a feature-based approach, and this decision has demonstrated its effectiveness in the application.
+
 ## Live Demonstration
 
 Experience a live demonstration of the application by following this link: [Demo](https://angular-numerusgroup-test.vercel.app/login "Demo")
