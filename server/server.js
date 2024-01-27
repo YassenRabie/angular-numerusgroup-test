@@ -10,7 +10,6 @@ var cors = require('cors')
 // express app
 const app = express();
 
-
 // middleware
 app.use(express.json());
 app.use(cors());
@@ -28,7 +27,9 @@ app.use("/articals", articalRoutes);
 app.use("/information", informationRoutes);
 app.use("/navigation", navigationRoutes);
 
+const port = process.env.PORT || 4000;
+
 // start the server
-app.listen(process.env.PORT, () => {
-  console.log(`Listening on port ${process.env.PORT}`);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
