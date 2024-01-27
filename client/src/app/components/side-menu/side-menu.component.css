@@ -16,6 +16,12 @@
 
    display: flex;
    flex-direction: column;
+
+   transition: transform 400ms ease-in-out;
+ }
+
+ .container.open {
+   transform: translateX(100%);
  }
 
  .menu-container {
@@ -44,4 +50,10 @@
 
  .menu-container a[href]:hover {
    color: var(--primary-color)
+ }
+
+ @media only screen and (max-width: 1080px) {
+   .container {
+     width: 75%;
+   }
  }

@@ -2,3 +2,9 @@
   font-size: 22px;
   max-width: 70%;
 }
+
+@media only screen and (max-width: 1080px) {
+  .artical-content {
+    max-width: unset;
+  }
+}

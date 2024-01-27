@@ -8,7 +8,7 @@
   <ng-container *ngIf="data">
     <h3 class="page-title">{{data.title}}</h3>
 
-    <div *ngIf="data">
+    <div class="container" *ngIf="data">
       <app-dynamic-table [headers]="data.headers" [data]="data.data"></app-dynamic-table>
     </div>
   </ng-container>

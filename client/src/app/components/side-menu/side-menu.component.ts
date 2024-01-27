@@ -11,9 +11,16 @@ export class SideMenuComponent {
   // Array to store navigation items for the side menu
   sidemenuData: INavigationItem[] = [];
 
+  // Variable to track the state of the side menu
+  isMenuOpen: boolean = false;
+
   constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+    this.navigationService.isMenuOpen$.subscribe((isOpen) => {
+      this.isMenuOpen = isOpen;
+    });
+
     this.getData();
   }
 
@@ -21,5 +28,12 @@ export class SideMenuComponent {
     this.navigationService.getNavigation().subscribe((navigation) => {
       this.sidemenuData = navigation;
     });
+  }
+
+  toggleMenu() {
+    const isSmallScreen = window.innerWidth < 1080;
+
+    if (isSmallScreen)
+      this.navigationService.toggleMenu();
   }
 }

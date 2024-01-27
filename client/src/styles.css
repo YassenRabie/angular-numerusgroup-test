@@ -49,3 +49,10 @@ a {
   font-weight: 600;
   margin-bottom: 32px;
 }
+
+@media only screen and (max-width: 1080px) {
+  .page-content {
+    width: unset;
+    padding: 32px;
+  }
+}

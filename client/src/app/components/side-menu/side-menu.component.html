@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" [class.open]="isMenuOpen">
   <div class="menu-container" *ngFor="let menuItem of sidemenuData">
-    <a [routerLink]="menuItem.url ? menuItem.url : null">
+    <a (click)="toggleMenu()" [routerLink]="menuItem.url ? menuItem.url : null">
       <span>{{menuItem.name}}</span>
     </a>
-
     <div class="sub-sidemenu-container" *ngIf="menuItem.children?.length">
-      <a [routerLink]="submenuItem.url ? submenuItem.url : null" *ngFor="let submenuItem of menuItem.children">
+      <a (click)="toggleMenu()" [routerLink]="submenuItem.url ? submenuItem.url : null"
+        *ngFor="let submenuItem of menuItem.children">
         <span>{{submenuItem.name}}</span>
       </a>
     </div>
