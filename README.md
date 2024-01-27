@@ -4,6 +4,8 @@
 
 Experience a live demonstration of the application by following this link: [Demo](https://angular-numerusgroup-test.vercel.app/login "Demo")
 
+Use one of the provided user accounts in the assignment to log in, or simply use "admin" as both the username and password.
+
 **Please Note:** The API connected to the client side is hosted on a free server using Render, so the initial request might be slow due to the server startup.
 
 ## Local Installation Guide
